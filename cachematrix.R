@@ -50,7 +50,7 @@ cacheSolve <- function(x, ...) {
         message("Cached inverse not found")
         m <- x$get()
         message("Calculating inverse")
-        i <- solve(m)
+        i <- solve(m, ...)
         message("Setting inverse into Cache")
         x$setinverse(i)
         i
